@@ -1,6 +1,6 @@
 # LogWeaver
 
-Use this library to generate call trace log file for a java class.
+Use this library to generate call trace log file for a java class. These log files can be used with the [Call Stack Visualization tool](https://github.com/omersalar/CSVFull) to view a visualization of the call trace.
 
 ### How to generate log file?
 1. Download or clone this reporsitory.

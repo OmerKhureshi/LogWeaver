@@ -3,7 +3,7 @@ package test;
 import java.util.Arrays;
 
 /**
- * Created by omer on 6/4/17.
+ * Example from Vogella.com at http://www.vogella.com/tutorials/JavaAlgorithmsQuicksort/article.html.
  */
 public class QuickSort {
 

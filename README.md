@@ -4,7 +4,7 @@ Use this library to generate call trace log file for a java class. These log fil
 
 ### How to generate log file?
 1. Download or clone this reporsitory.
-2. Place the java file (for which you want the log file to be generated) in `LogWeaver/src/test` directory.
+2. Place the java file (for which you want the log file to be generated) in `LogWeaver/src/test` directory. The java class should have `package test;` as the package. 
 3. Run execute.sh with the java file name as an argument prefixed with `test/`
   
     For example, if you want to generate the log files for a file named QuickSort.java, place it in `LogWeaver/src/test directory` and     execute the following command from LogWeaver directory

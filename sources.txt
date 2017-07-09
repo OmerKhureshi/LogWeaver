@@ -1,5 +1,5 @@
-src/test/TestAspect.java
-src/test/ThreadExampleOne.java
-src/test/ThreadExampleTwo.java
-src/test/QuickSort.java
-src/test/ThreadExampleThree.java
+src/TestAspect.java
+src/samples/QuickSort.java
+src/samples/com/ThreadExampleOne.java
+src/samples/com/ThreadExampleTwo.java
+src/samples/com/ThreadExampleThree.java

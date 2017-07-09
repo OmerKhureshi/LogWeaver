@@ -2,10 +2,12 @@
 #***************************************
 #Logger Library:
 #***************************************
+mkdir -p classes
+mkdir -p target
 # compile all java files in logger folder.
 cd logger/
 find . -type f -iname "*.java" > sources.txt
-javac -classpath lib/aspectjrt.jar:lib/aspectjtools.jar @sources.txt -d classes
+javac -classpath lib/aspectjrt-1.8.10.jar:lib/aspectjtools-1.8.10.jar @sources.txt -d classes
 
 # build jar
 cd classes/
@@ -20,12 +22,12 @@ cp loggerlib.jar ../../lib/
 cd ../../
 
 # compile and run
+find . -type f -name '*.class' -delete
+
 find src/ -type f -iname "*.java" > sources.txt
 
-javac -classpath lib/aspectjrt.jar:lib/aspectjtools.jar:lib/loggerlib.jar -g -d ./classes @sources.txt
+javac -classpath lib/aspectjrt-1.8.10.jar:lib/aspectjtools-1.8.10.jar:lib/loggerlib.jar:lib/controlsfx-8.40.12.jar:lib/derby.jar -g -d ./classes @sources.txt
 
-java -cp lib/aspectjrt.jar:lib/aspectjtools.jar:lib/loggerlib.jar  org.aspectj.tools.ajc.Main -source 1.5 -inpath ./classes -aspectpath ./src/ -d ./target
+java -noverify -cp lib/aspectjrt-1.8.10.jar:lib/aspectjtools-1.8.10.jar:lib/loggerlib.jar:lib/controlsfx-8.40.12.jar:lib/derby.jar:. org.aspectj.tools.ajc.Main -source 1.5 -inpath ./classes -aspectpath ./src/ -d ./target
 
-java -cp lib/aspectjrt.jar:lib/aspectjtools.jar:lib/loggerlib.jar:./target $1
-
-
+java -cp lib/aspectjrt-1.8.10.jar:lib/aspectjtools-1.8.10.jar:lib/loggerlib.jar:lib/controlsfx-8.40.12.jar:lib/derby.jar:./target $1

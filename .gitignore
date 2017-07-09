@@ -1,0 +1,10 @@
+# Database
+/DB/
+
+# Database logs
+*.log
+
+# Generated classes
+target/
+classes/
+
